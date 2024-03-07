@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=https://schema.skills17.ch/task-config/v3/config.schema.json
+id: image-editor
+metadata:
+  name: Image Editor
+localHistory: true
+source:
+- src/**
+groups:
+  - match: ^UI Intro – Desktop .*
+    displayName: UI Intro – Desktop (Task 1)
+    defaultPoints: 0.5
+  - match: ^UI Intro – Mobile .*
+    displayName: UI Intro – Mobile (Task 1)
+    defaultPoints: 0.5
+  - match: ^UI App – Desktop .*
+    displayName: UI App – Desktop (Task 1)
+    defaultPoints: 0.25
+    tests:
+      - match: .* centered$
+        points: 0.5
+  - match: ^UI App – Mobile .*
+    displayName: UI App – Mobile (Task 1)
+    defaultPoints: 0.5
+  - match: ^UI Interactions .*
+    displayName: UI Interactions (Task 1)
+    defaultPoints: 0.5
+  - match: ^(formatString|camelCaseString|prepareFiltersForCopy|parseFiltersFromCopy|copyFiltersToClipboard|removeFilterElement|applyFilters) .*
+    displayName: Basic JavaScript (Task 2)
+    defaultPoints: 0.5
+    tests:
+      - match: .* simple string to camel case$
+        points: 1
+  - match: ^(imageDataToGrayscaleImageData|grayscaleImageDataToImageData|applyKernel) .*
+    displayName: Image Convolution (Task 2)
+    defaultPoints: 1
+    tests:
+      - match: .* identity\d .*
+        points: 0.5
+      - match: .* (darken|brighten) .*
+        points: 0.5
+      - match: .* (gaussianBlur|unsharpMasking|laplacianOfGaussian) .*
+        points: 1.5

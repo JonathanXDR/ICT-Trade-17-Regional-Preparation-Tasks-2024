@@ -1,0 +1,16 @@
+/**
+ * STRING_COMPETITION STRING_YEAR - STRING_TRADE - STRING_TITLE
+ * Frontend - Task 1
+ *
+ * Your task is to implement the design of the image editor.
+ * You are allowed to add any CSS selectors and styles to this file.
+ * You are not allowed to change the HTML or any other file.
+ */
+
+body {
+    -webkit-font-smoothing: antialiased;
+}
+
+.hidden {
+    display: none !important;
+}
